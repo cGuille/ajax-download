@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="theme-color" content="#455A64">
+
+  <title>AjaxDownload demo</title>
+</head>
+
+<body>
+  <p>
+    Open your dev tools and start playing with the <code>AjaxDownload</code> constructor.
+  </p>
+  <p>You will find a simple example in the <code>&lt;script&gt;</code> tags of this page's source.</p>
+  <p>This will NOT work with the <code>file://</code> URL scheme, you MUST start a web server in order to use XMLHttpRequest.</p>
+
+  <script src="../node_modules/dom-event-emitter/src/event-emitter.js"></script>
+  <script src="../src/ajax-download.js"></script>
+  <script>
+const DOWNLOAD_URL = '';
+
+let download = new AjaxDownload(DOWNLOAD_URL);
+
+download.addEventListener('progress', (event) => console.log(event));
+
+download.fetch()
+  .then(response => console.log(response))
+  .catch(error => console.error(error));
+  </script>
+</body>
+</html>
