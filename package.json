@@ -1,0 +1,16 @@
+{
+  "name": "ajax-download",
+  "version": "1.0.0",
+  "description": "Download files over HTTP with progress events; encapsulates XMLHttpRequest API.",
+  "main": "src/ajax-download.js",
+  "keywords": [
+    "download",
+    "ajax",
+    "xhr",
+    "progress"
+  ],
+  "author": "Guillaume Charmetant <cguille.dev@gmail.com>",
+  "dependencies": {
+    "dom-event-emitter": "cGuille/dom-event-emitter"
+  }
+}
